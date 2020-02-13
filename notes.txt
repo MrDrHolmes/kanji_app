@@ -1,3 +1,17 @@
+https://github.com/MrDrHolmes/kanji_app.git
+
+USEFUL COMMANDS:
+	Pushing to master branch:
+		cd <<git folder>>
+		git add .
+		git commit -m "<<some note about the update>>"
+		git push -u origin master
+
+	Pulling from master branch:
+		cd <<git folder>>
+		git pull https://github.com/MrDrHolmes/kanji_app.git master
+		<<WARNING: This will probably erase anything in your folder that hasn't been pushed to GitHub>>
+
 Android vs iPhone development
 	Android uses Java/Kotlin, iPhone uses Swift
 	For Android, use Android Studio
