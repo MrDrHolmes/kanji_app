@@ -1,0 +1,13 @@
+Android vs iPhone development
+	Android uses Java/Kotlin, iPhone uses Swift
+	For Android, use Android Studio
+	For Apple, use XCode
+	
+	Android has a back button, iPhone does not
+
+
+App features:
+Kanji practice app, allows drawing to practice writing Kanji
+At first, only implement Genki I and II Kanji
+Dictionary mode (Eng->Jpn, Jpn->Eng) and Kanji writing first
+	Grab Kanji from a database?? Need to learn how to do this
