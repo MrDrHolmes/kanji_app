@@ -1,6 +1,10 @@
 https://github.com/MrDrHolmes/kanji_app.git
 
 USEFUL COMMANDS:
+	Terminal navigation:
+		cd <<folder name>> 	<- Enter folder named "folder name"
+		ls 			<- Show contents of current folder
+
 	Pushing to master branch:
 		cd <<git folder>>
 		git add .
