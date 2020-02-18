@@ -1,0 +1,65 @@
+Getting help for a git command:
+	man git-<<command name>>
+	-or-
+	git help <<command name>>
+
+Git configuration - Don't worry about this unless you have to. And you probably don't tbh.
+	git config <<primary options>> <<secondary options>>
+	Primary options - specify scope: Default is GLOBAL, can be left blank
+		--global	(Computer-wide configuration settings)
+		--local 	(Repository-specific configuration settings)
+		--system	(Don't ask)
+		--worktree	(Don't ask)
+	
+	Secondary options - read or write field data
+		--list		(Display all fields for a scoped configuration)
+		<<field name>> "<<value>>"
+				(Set a value for a field)
+
+	Examples:
+		git config --list
+		git config --local --list
+		git config user.name "NAME FOR THE GLOBAL USER"
+		git config --local user.name "NAME FOR THIS REPOSITORY'S USER"
+		git config --local user.email "LOCALUSEREMAIL@emailplace.commaybe"
+
+Adding a new project on the computer
+	You really only do this if you have a GitHub repository already set up or something
+	
+	cd <<project folder>>
+	git init
+		(You should get the response "Initialized empty Git repository in .git/")
+
+Making changes to a project - This is done inside the project folder
+	
+	git add . 	(Takes a snapshot of all the files in the folder - "." = current folder)
+	git add <<file1>> <<file2>> ... <<filen>
+			(Takes a snapshot of files 1 through n)
+
+	Snapshots made with "git add" are stored in a temporary area called the "index"
+	Because that really matters I guess
+	Regardless, you can see what is about to be committed using:
+		git diff --cached
+		-or-
+		git status
+		^^^^^^^^^^^^^^^^^
+		(I've never had to use these)
+	You can remove changes/files that are about to be committed using:
+		git restore --staged <<file1>> <<file2>> ... <<filen>>
+	
+	git commit	(Permanently stores the contents of the index in the repository)
+			(This wording will prompt you for a message after you hit enter)
+	git commit -m "<<some commit message>>"
+			(Commits and adds a message in one go. Yay efficiency)
+
+	If you're REALLY lazy, and I am, you can use:
+		git commit -a -m "<<message>>"
+	This adds all files and commits and adds a commit message all at the same time.
+
+Viewing recent changes
+	
+	git log
+	git log -p
+	git log --stat --summary
+	
+	...arranged in order of how much information they spit out.
